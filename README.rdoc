@@ -1,0 +1,8 @@
+= renren
+
+One of the goals of this gem was to have the same syntax as the twitter gem wherever possible so that it would be easy to learn and use.  Download the gem and give it a try.  Also, I've put together a small demo using sinatra showing how you can use the renren gem.
+
+
+To install the gem simply enter:
+
+  gem install renren
