@@ -1,8 +1,17 @@
 = renren
 
-One of the goals of this gem was to have the same syntax as the twitter gem wherever possible so that it would be easy to learn and use.  Download the gem and give it a try.  Also, I've put together a small demo using sinatra showing how you can use the renren gem.
-
+A third party, non-official renren API gem created by huangxiangdan. Inspired by ballantyne's weibo API gem.
 
 To install the gem simply enter:
 
   gem install renren
+
+This is a minimalistic API implementation, where all function calls goes through a single method. For example to publish a feed item one might do the following:
+
+	param = {:method, "feed.publishFeed", :name, "foo", :description, "bar", :url, "http://jihua.fm"}
+	renren.call_method(param)
+    
+This gem was made in the process of creating 计划FM [http://jihua.fm], please take a moment and go and check out that project for example usage.
+
+== Sites using the Weibo gem
+ 计划FM [http://jihua.fm]
