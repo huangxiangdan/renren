@@ -11,7 +11,7 @@ This is a minimalistic API implementation, where all function calls goes through
   renren = Renren::Base.new(token)
   renren.call_method(param)
 
-You can use Omniauth-renren to get token.
+You can use Omniauth-renren to get the token.Also you can visit https://github.com/huangxiangdan/renren-example to see the example.
     
 This gem was made in the process of creating 计划FM [http://jihua.fm], please take a moment and go and check out that project for example usage.
 
