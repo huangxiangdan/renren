@@ -17,7 +17,7 @@ module Renren
       @params[:access_token] = access_token
     end
     
-    def call_method(opts = {:method => users.getinfo})
+    def call_method(opts = {:method => "users.getinfo"})
       MultiJson.decode(Net::HTTP.post_form(URI.parse('http://api.renren.com/restserver.do'), update_params(opts)).body)
     end
     
