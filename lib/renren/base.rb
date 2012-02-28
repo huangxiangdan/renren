@@ -23,7 +23,7 @@ module Renren
     end
     
     def upload_file(filename, opts = {})
-      MultiJson.decode(RestClient.post(URI.parse('http://api.renren.com/restserver.do'), update_params(opts).merge(:upload => File.new(filename)))).body
+      MultiJson.decode(RestClient.post('http://api.renren.com/restserver.do', update_params(opts).merge(:upload => File.new(filename))))
     end
     
     private
