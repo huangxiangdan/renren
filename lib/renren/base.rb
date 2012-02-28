@@ -3,6 +3,7 @@ require 'uri'
 require 'multi_json'
 require 'net/http'
 require 'digest'
+require 'rest_client'
 
 module Renren
   class Base
@@ -17,8 +18,12 @@ module Renren
       @params[:access_token] = access_token
     end
     
-    def call_method(opts = {:method => "users.getinfo"})
+    def call_method(opts = {:method => "users.getInfo"})
       MultiJson.decode(Net::HTTP.post_form(URI.parse('http://api.renren.com/restserver.do'), update_params(opts)).body)
+    end
+    
+    def upload_file(filename, opts = {})
+      MultiJson.decode(RestClient.post(URI.parse('http://api.renren.com/restserver.do'), update_params(opts).merge(:upload => File.new(filename)))).body
     end
     
     private
